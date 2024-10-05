@@ -6,8 +6,7 @@ public class Main {
         FirstTask.first_task(10);
 
         System.out.println("\nTask ------2------");
-        PrimesGenerator primes = new PrimesGenerator(100);
-        new PrimesGeneratorTest(primes);
+        SecondTask.second_task();
 
         System.out.println("\n\nTask ------3------");
         ThirdTask.third_task();
