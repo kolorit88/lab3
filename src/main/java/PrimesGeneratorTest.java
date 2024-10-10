@@ -4,20 +4,25 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PrimesGeneratorTest {
+    PrimesGenerator generator;
 
     PrimesGeneratorTest(PrimesGenerator generator) {
+        this.generator = generator;
+    }
 
-        Iterator<Integer> iterator = generator.nums.iterator();
-        while (iterator.hasNext()) {
+    public void test(Integer n){
+        show(generator.nums, n);
+        show(generator.nums.reversed(), n);
+    }
+
+    public void show(List<Integer> nums, Integer n){
+        int i = 0;
+        Iterator<Integer> iterator = nums.iterator();
+
+        while (iterator.hasNext() && i < n) {
             System.out.print(iterator.next() + " ");
+            i++;
         }
         System.out.println();
-
-        Iterator<Integer> iterator1 = generator.nums.reversed().iterator();
-        while (iterator1.hasNext()) {
-            System.out.print(iterator1.next() + " ");
-        }
-
-
     }
 }

@@ -1,6 +1,6 @@
 public class SecondTask {
-    public static void second_task() {
+    public static void secondTask() {
         PrimesGenerator primes = new PrimesGenerator(100);
-        new PrimesGeneratorTest(primes);
+        new PrimesGeneratorTest(primes).test(10);
     }
 }

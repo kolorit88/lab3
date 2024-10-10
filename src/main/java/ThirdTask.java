@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class ThirdTask {
-    public static void third_task() {
+    public static void thirdTask() {
         List<Human> humans = new ArrayList<>();
         humans.add(new Human("Liza", "Berdnichkowa", 999999 <3 ? 1: 0));
         humans.add(new Human("Timofey", "Kislichkin", 999999));
@@ -29,25 +29,25 @@ public class ThirdTask {
 
         Collections.shuffle(humans);
         // Обычный сет без учета последовательности
-        HashSet<Human> h_set = new HashSet<>(humans);
-        System.out.println(h_set);
+        HashSet<Human> hSet = new HashSet<>(humans);
+        System.out.println(hSet);
 
         // Сет который сохраняет последовательность, добавляя ссылки на предыдущий и следующий элемент
-        LinkedHashSet<Human> lh_set = new LinkedHashSet<>(humans);
-        System.out.println(lh_set);
+        LinkedHashSet<Human> lhSet = new LinkedHashSet<>(humans);
+        System.out.println(lhSet);
 
         // Сет который для хранения использует красно-ченое дерево, реализует интерфейс Comparable
-        TreeSet<Human> tree_set = new TreeSet<>(humans);
-        System.out.println(tree_set);
+        TreeSet<Human> treeSet = new TreeSet<>(humans);
+        System.out.println(treeSet);
 
         // Реализует интерфейс Comparator
-        TreeSet<Human> tree_set_with_comp = new TreeSet<>(comparator);
-        tree_set_with_comp.addAll(humans);
-        System.out.println(tree_set_with_comp);
+        TreeSet<Human> treeSetWithComp = new TreeSet<>(comparator);
+        treeSetWithComp.addAll(humans);
+        System.out.println(treeSetWithComp);
 
         //Сортировка с учетом анонимного компоратора
-        TreeSet<Human> tree_set_with_comp_age = new TreeSet<>((h1, h2 ) -> Integer.compare(h1.getAge(), h2.getAge()));
-        tree_set_with_comp_age.addAll(humans);
-        System.out.println(tree_set_with_comp_age);
+        TreeSet<Human> treeSetWithCompAge = new TreeSet<>((h1, h2 ) -> Integer.compare(h1.getAge(), h2.getAge()));
+        treeSetWithCompAge.addAll(humans);
+        System.out.println(treeSetWithCompAge);
     }
 }
