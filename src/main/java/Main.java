@@ -15,12 +15,12 @@ public class Main {
         FourthTask.fourthTask("To to ti tI cat Cat and dog dOg doG");
 
         System.out.println("\nTask ------5------");
-        HashMap <String, Integer> to_switch = new HashMap <String, Integer>();
-        to_switch.put("one", 1);
-        to_switch.put("two", 2);
-        to_switch.put("three", 3);
-        System.out.println(to_switch);
-        System.out.println(FifthTask.fifthTask(to_switch));
+        HashMap <String, Integer> toSwitch = new HashMap <String, Integer>();
+        toSwitch.put("one", 1);
+        toSwitch.put("two", 2);
+        toSwitch.put("three", 3);
+        System.out.println(toSwitch);
+        System.out.println(FifthTask.fifthTask(toSwitch));
 
     }
 }
