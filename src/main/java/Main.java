@@ -19,6 +19,7 @@ public class Main {
         toSwitch.put("one", 1);
         toSwitch.put("two", 2);
         toSwitch.put("three", 3);
+        toSwitch.put("tri", 3);
         System.out.println(toSwitch);
         System.out.println(FifthTask.fifthTask(toSwitch));
 
