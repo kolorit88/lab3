@@ -7,21 +7,17 @@ public class PrimesGenerator {
 
     public PrimesGenerator(int n) {
         this.n = n;
-        if (n >= 2) {
-            for (int i = 2; nums.size() <= n; i++) {
-                if ((i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) ||i == 2|| i == 3 || i == 5 || i == 7) {
-                    boolean divided = false;
-                    for(int num: nums) {
-                        if (i % num == 0){
-                            divided = true;
-                            break;
-                        }
-                    }
-
-                    if(!divided){
-                        nums.add(i);
-                    }
+        for (int i = 2; nums.size() < n; i++) {
+            boolean prime = true;
+            for(int num: nums) {
+                if (i % num == 0){
+                    prime = false;
+                    break;
                 }
+            }
+
+            if(prime){
+                nums.add(i);
             }
         }
     }
